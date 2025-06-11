@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, GraduationCap } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 interface HeaderProps {
   onLoginClick: () => void;
@@ -10,40 +11,63 @@ interface HeaderProps {
 
 const Header = ({ onLoginClick }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Departments", href: "#departments" },
-    { name: "Faculty", href: "#faculty" },
-    { name: "Activities", href: "#activities" },
+    { name: "Home", href: "/" },
+    { name: "Departments", href: "/departments" },
+    { name: "Faculty", href: "/faculty" },
+    { name: "Activities", href: "/activities" },
     { name: "Infrastructure", href: "#infrastructure" },
     { name: "Achievements", href: "#achievements" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    return location.pathname === href;
+  };
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-primary">TechEng College</span>
-          </div>
+          <Link to="/" className="flex items-center space-x-2">
+            <GraduationCap className="h-8 w-8 text-orange-600" />
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-primary">UVCE</span>
+              <span className="text-xs text-muted-foreground hidden sm:block">University Visvesvaraya College of Engineering</span>
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                {item.name}
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-orange-600 transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`transition-colors duration-200 ${
+                    isActive(item.href) 
+                      ? "text-orange-600 font-semibold" 
+                      : "text-muted-foreground hover:text-orange-600"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button onClick={onLoginClick} variant="outline" className="hidden sm:flex">
+            <Button onClick={onLoginClick} variant="outline" className="hidden sm:flex border-orange-600 text-orange-600 hover:bg-orange-50">
               Login
             </Button>
             
@@ -57,16 +81,31 @@ const Header = ({ onLoginClick }: HeaderProps) => {
               <SheetContent side="right">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </a>
+                    item.href.startsWith('#') ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-muted-foreground hover:text-orange-600 transition-colors duration-200"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className={`transition-colors duration-200 ${
+                          isActive(item.href) 
+                            ? "text-orange-600 font-semibold" 
+                            : "text-muted-foreground hover:text-orange-600"
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    )
                   ))}
-                  <Button onClick={onLoginClick} variant="outline" className="mt-4">
+                  <Button onClick={onLoginClick} variant="outline" className="mt-4 border-orange-600 text-orange-600 hover:bg-orange-50">
                     Login
                   </Button>
                 </nav>
