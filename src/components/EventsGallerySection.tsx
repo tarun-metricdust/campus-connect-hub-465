@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Calendar, Play } from "lucide-react";
 
 const EventsGallerySection = () => {
@@ -9,7 +10,9 @@ const EventsGallerySection = () => {
     { date: "2024-03-20", title: "Industry Connect", description: "Networking event with leading tech companies" },
     { date: "2024-03-25", title: "Alumni Reunion", description: "Annual gathering of UVCE alumni" },
     { date: "2024-04-01", title: "Research Conference", description: "Presentation of latest research projects" },
-    { date: "2024-04-10", title: "Cultural Festival", description: "Celebration of arts, music, and dance" }
+    { date: "2024-04-10", title: "Cultural Festival", description: "Celebration of arts, music, and dance" },
+    { date: "2024-04-15", title: "Sports Day", description: "Inter-departmental sports competition" },
+    { date: "2024-04-20", title: "Innovation Fair", description: "Showcase of student projects and innovations" }
   ];
 
   const galleryImages = [
@@ -34,15 +37,17 @@ const EventsGallerySection = () => {
               <CardDescription>Upcoming events and important dates</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                {events.map((event, index) => (
-                  <div key={index} className="border-l-4 border-orange-600 pl-4 py-2">
-                    <div className="text-sm text-orange-600 font-semibold">{event.date}</div>
-                    <div className="font-medium">{event.title}</div>
-                    <div className="text-sm text-muted-foreground">{event.description}</div>
-                  </div>
-                ))}
-              </div>
+              <ScrollArea className="h-64">
+                <div className="space-y-4 pr-4">
+                  {events.map((event, index) => (
+                    <div key={index} className="border-l-4 border-orange-600 pl-4 py-2">
+                      <div className="text-sm text-orange-600 font-semibold">{event.date}</div>
+                      <div className="font-medium">{event.title}</div>
+                      <div className="text-sm text-muted-foreground">{event.description}</div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollArea>
             </CardContent>
           </Card>
 

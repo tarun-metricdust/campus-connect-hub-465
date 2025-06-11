@@ -4,8 +4,9 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AnnouncementSection from "@/components/AnnouncementSection";
 import OverviewSection from "@/components/OverviewSection";
-import QuickAccessSection from "@/components/QuickAccessSection";
+import QuickAccessBoxes from "@/components/QuickAccessBoxes";
 import InfoTabsSection from "@/components/InfoTabsSection";
+import HistoryTestimonialsSection from "@/components/HistoryTestimonialsSection";
 import EventsGallerySection from "@/components/EventsGallerySection";
 import RecruitersSection from "@/components/RecruitersSection";
 import Footer from "@/components/Footer";
@@ -19,18 +20,19 @@ const Index = () => {
       <Header onLoginClick={() => setIsLoginOpen(true)} />
       <HeroSection />
       
-      {/* Announcements and Overview Section */}
+      {/* Announcements, Overview and Quick Access Section */}
       <section className="py-16 bg-gradient-to-br from-orange-50 to-green-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             <AnnouncementSection />
             <OverviewSection />
+            <QuickAccessBoxes />
           </div>
         </div>
       </section>
 
-      <QuickAccessSection />
       <InfoTabsSection />
+      <HistoryTestimonialsSection />
       <EventsGallerySection />
       <RecruitersSection />
       <Footer />
