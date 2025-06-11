@@ -18,8 +18,8 @@ const Header = ({ onLoginClick }: HeaderProps) => {
     { name: "Departments", href: "/departments" },
     { name: "Faculty", href: "/faculty" },
     { name: "Activities", href: "/activities" },
-    { name: "Infrastructure", href: "#infrastructure" },
-    { name: "Achievements", href: "#achievements" },
+    { name: "Infrastructure", href: "/infrastructure" },
+    { name: "Achievements", href: "/achievements" },
   ];
 
   const isActive = (href: string) => {
@@ -42,27 +42,17 @@ const Header = ({ onLoginClick }: HeaderProps) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              item.href.startsWith('#') ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-orange-600 transition-colors duration-200"
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`transition-colors duration-200 ${
-                    isActive(item.href) 
-                      ? "text-orange-600 font-semibold" 
-                      : "text-muted-foreground hover:text-orange-600"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              )
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`transition-colors duration-200 ${
+                  isActive(item.href) 
+                    ? "text-orange-600 font-semibold" 
+                    : "text-muted-foreground hover:text-orange-600"
+                }`}
+              >
+                {item.name}
+              </Link>
             ))}
           </nav>
 
@@ -81,29 +71,18 @@ const Header = ({ onLoginClick }: HeaderProps) => {
               <SheetContent side="right">
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    item.href.startsWith('#') ? (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="text-muted-foreground hover:text-orange-600 transition-colors duration-200"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.name}
-                      </a>
-                    ) : (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className={`transition-colors duration-200 ${
-                          isActive(item.href) 
-                            ? "text-orange-600 font-semibold" 
-                            : "text-muted-foreground hover:text-orange-600"
-                        }`}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    )
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`transition-colors duration-200 ${
+                        isActive(item.href) 
+                          ? "text-orange-600 font-semibold" 
+                          : "text-muted-foreground hover:text-orange-600"
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
                   ))}
                   <Button onClick={onLoginClick} variant="outline" className="mt-4 border-orange-600 text-orange-600 hover:bg-orange-50">
                     Login
