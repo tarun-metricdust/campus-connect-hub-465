@@ -78,8 +78,8 @@ const AnnouncementSection = () => {
     <Card className="h-full">
       <CardHeader>
         <div className="flex items-center gap-2">
-          <Bell className="h-6 w-6 text-orange-600" />
-          <CardTitle className="text-2xl font-bold text-orange-600">Announcements</CardTitle>
+          <Bell className="h-6 w-6 text-uvce-primary" />
+          <CardTitle className="text-2xl font-bold text-uvce-primary">Announcements</CardTitle>
         </div>
       </CardHeader>
       <CardContent>

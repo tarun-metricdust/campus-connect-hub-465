@@ -15,6 +15,7 @@ const Header = ({ onLoginClick }: HeaderProps) => {
 
   const navItems = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Departments", href: "/departments" },
     { name: "Faculty", href: "/faculty" },
     { name: "Activities", href: "/activities" },
@@ -32,7 +33,7 @@ const Header = ({ onLoginClick }: HeaderProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-orange-600" />
+            <GraduationCap className="h-8 w-8 text-uvce-primary" />
             <div className="flex flex-col">
               <span className="text-lg font-bold text-primary">UVCE</span>
               <span className="text-xs text-muted-foreground hidden sm:block">University Visvesvaraya College of Engineering</span>
@@ -47,8 +48,8 @@ const Header = ({ onLoginClick }: HeaderProps) => {
                 to={item.href}
                 className={`transition-colors duration-200 ${
                   isActive(item.href) 
-                    ? "text-orange-600 font-semibold" 
-                    : "text-muted-foreground hover:text-orange-600"
+                    ? "text-uvce-primary font-semibold" 
+                    : "text-muted-foreground hover:text-uvce-primary"
                 }`}
               >
                 {item.name}
@@ -57,7 +58,7 @@ const Header = ({ onLoginClick }: HeaderProps) => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button onClick={onLoginClick} variant="outline" className="hidden sm:flex border-orange-600 text-orange-600 hover:bg-orange-50">
+            <Button onClick={onLoginClick} variant="outline" className="hidden sm:flex border-uvce-primary text-uvce-primary hover:bg-uvce-primary-50">
               Login
             </Button>
             
@@ -76,15 +77,15 @@ const Header = ({ onLoginClick }: HeaderProps) => {
                       to={item.href}
                       className={`transition-colors duration-200 ${
                         isActive(item.href) 
-                          ? "text-orange-600 font-semibold" 
-                          : "text-muted-foreground hover:text-orange-600"
+                          ? "text-uvce-primary font-semibold" 
+                          : "text-muted-foreground hover:text-uvce-primary"
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
                     </Link>
                   ))}
-                  <Button onClick={onLoginClick} variant="outline" className="mt-4 border-orange-600 text-orange-600 hover:bg-orange-50">
+                  <Button onClick={onLoginClick} variant="outline" className="mt-4 border-uvce-primary text-uvce-primary hover:bg-uvce-primary-50">
                     Login
                   </Button>
                 </nav>

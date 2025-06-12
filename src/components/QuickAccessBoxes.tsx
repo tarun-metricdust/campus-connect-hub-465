@@ -39,7 +39,7 @@ const QuickAccessBoxes = () => {
           <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
             <CardHeader className="pb-3">
               <div className="flex items-center gap-3">
-                <Icon className="h-6 w-6 text-orange-600" />
+                <Icon className="h-6 w-6 text-uvce-primary" />
                 <CardTitle className="text-lg">{item.title}</CardTitle>
               </div>
             </CardHeader>
@@ -49,7 +49,7 @@ const QuickAccessBoxes = () => {
               </CardDescription>
               <Button 
                 size="sm"
-                className="w-full bg-orange-600 hover:bg-orange-700"
+                className="w-full bg-uvce-primary hover:bg-uvce-primary-light"
                 onClick={() => window.location.href = item.link}
               >
                 Explore
