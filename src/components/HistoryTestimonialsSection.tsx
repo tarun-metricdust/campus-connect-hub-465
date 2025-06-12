@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const HistoryTestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -29,6 +36,25 @@ const HistoryTestimonialsSection = () => {
     }
   ];
 
+  const historyImages = [
+    {
+      url: "https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=250&fit=crop",
+      title: "Historic Campus Building"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=400&h=250&fit=crop",
+      title: "Sir M. Visvesvaraya Legacy"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=250&fit=crop",
+      title: "Engineering Excellence"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop",
+      title: "Modern Facilities"
+    }
+  ];
+
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
@@ -38,17 +64,17 @@ const HistoryTestimonialsSection = () => {
   };
 
   return (
-    <section className="py-12 bg-gradient-to-br from-gray-50 to-red-50">
+    <section className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* History and Legacy */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
               <h2 className="text-3xl font-bold mb-4 text-primary">History & Legacy</h2>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-3">
                 Established in 1917, University Visvesvaraya College of Engineering stands as one of India's premier engineering institutions. Named after the legendary engineer Sir M. Visvesvaraya, UVCE has been at the forefront of engineering education for over a century.
               </p>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-4">
                 With a rich heritage of producing distinguished engineers, researchers, and leaders, UVCE continues to uphold its tradition of excellence in education and innovation.
               </p>
               <Link to="/about">
@@ -57,14 +83,30 @@ const HistoryTestimonialsSection = () => {
                 </Button>
               </Link>
             </div>
-            <div className="relative h-48 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-uvce-primary to-red-900 opacity-90"></div>
-              <div className="absolute inset-0 flex items-center justify-center text-white">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-2">100+ Years</h3>
-                  <p className="text-lg">of Excellence</p>
-                </div>
-              </div>
+            
+            {/* Image Carousel */}
+            <div className="relative">
+              <Carousel className="w-full max-w-md mx-auto">
+                <CarouselContent>
+                  {historyImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="relative h-48 rounded-lg overflow-hidden">
+                        <img
+                          src={image.url}
+                          alt={image.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-uvce-primary/60 to-transparent"></div>
+                        <div className="absolute bottom-4 left-4 text-white">
+                          <p className="text-sm font-medium">{image.title}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
 

@@ -32,24 +32,24 @@ const QuickAccessBoxes = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="grid grid-cols-2 gap-4 h-full">
       {quickAccess.map((item, index) => {
         const Icon = item.icon;
         return (
-          <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-3">
-                <Icon className="h-6 w-6 text-uvce-primary" />
-                <CardTitle className="text-lg">{item.title}</CardTitle>
+          <Card key={index} className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
+            <CardHeader className="pb-2 flex-shrink-0">
+              <div className="flex items-center gap-2">
+                <Icon className="h-5 w-5 text-uvce-primary" />
+                <CardTitle className="text-base">{item.title}</CardTitle>
               </div>
             </CardHeader>
-            <CardContent>
-              <CardDescription className="mb-3 text-sm">
+            <CardContent className="flex-1 flex flex-col">
+              <CardDescription className="mb-3 text-xs flex-1">
                 {item.description}
               </CardDescription>
               <Button 
                 size="sm"
-                className="w-full bg-uvce-primary hover:bg-uvce-primary-light"
+                className="w-full bg-uvce-primary hover:bg-uvce-primary-light text-xs"
                 onClick={() => window.location.href = item.link}
               >
                 Explore
