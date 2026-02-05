@@ -27,9 +27,9 @@ const RecruitersSection = () => {
           </CardHeader>
           <CardContent>
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll space-x-12 items-center">
+              <div className="flex animate-scroll items-center" style={{ width: 'max-content' }}>
                 {[...recruiters, ...recruiters].map((company, index) => (
-                  <div key={index} className="flex-shrink-0 w-32 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div key={index} className="flex-shrink-0 w-32 h-16 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                     <img
                       src={company.logo}
                       alt={company.name}
