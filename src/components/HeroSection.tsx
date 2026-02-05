@@ -64,7 +64,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-200">
               <img
-                src="/lovable-uploads/acef2ee4-6146-4598-974e-f79e9b1b5439.png"
+                src="/uvce-campus.jpg"
                 alt="UVCE Campus - Historic Engineering College"
                 className="w-full h-full object-cover"
               />
