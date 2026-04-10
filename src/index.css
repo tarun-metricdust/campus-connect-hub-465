@@ -31,7 +31,7 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --uvce-primary: 0 100% 17%; /* #550000 */
+    --uvce-primary: 0 84% 32%; /* #940d0d */
   }
 
   .dark {
@@ -59,7 +59,7 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --uvce-primary: 0 100% 17%; /* #550000 */
+    --uvce-primary: 0 84% 32%; /* #940d0d */
   }
 }
 
@@ -75,23 +75,23 @@
 
 /* Custom UVCE color utilities */
 .text-uvce-primary {
-  color: #550000;
+  color: #940d0d;
 }
 
 .bg-uvce-primary {
-  background-color: #550000;
+  background-color: #940d0d;
 }
 
 .border-uvce-primary {
-  border-color: #550000;
+  border-color: #940d0d;
 }
 
 .hover\:bg-uvce-primary-light:hover {
-  background-color: #770000;
+  background-color: #b01010;
 }
 
 .hover\:bg-uvce-primary-50:hover {
-  background-color: rgba(85, 0, 0, 0.05);
+  background-color: rgba(148, 13, 13, 0.05);
 }
 
 /* Animation for the recruiters slider */
@@ -122,10 +122,10 @@
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #550000;
+  background: #940d0d;
   border-radius: 2px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #770000;
+  background: #b01010;
 }
