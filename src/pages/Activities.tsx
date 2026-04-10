@@ -11,59 +11,16 @@ const Activities = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const clubs = [
-    {
-      name: "IEEE Student Branch",
-      type: "Technical",
-      members: 150,
-      description: "Promoting technological innovation and excellence in engineering",
-      activities: ["Workshops", "Conferences", "Project Competitions"],
-      icon: Code
-    },
-    {
-      name: "Cultural Committee",
-      type: "Cultural",
-      members: 200,
-      description: "Celebrating the rich cultural heritage through various programs",
-      activities: ["Classical Dance", "Music Concerts", "Drama", "Art Exhibitions"],
-      icon: Music
-    },
-    {
-      name: "Sports Committee",
-      type: "Sports",
-      members: 180,
-      description: "Promoting physical fitness and sportsmanship",
-      activities: ["Cricket", "Football", "Basketball", "Athletics"],
-      icon: Trophy
-    },
-    {
-      name: "Literary Society",
-      type: "Literary",
-      members: 120,
-      description: "Fostering love for literature and creative writing",
-      activities: ["Poetry", "Debates", "Story Writing", "Book Clubs"],
-      icon: BookOpen
-    }
+    { name: "IEEE Student Branch", type: "Technical", members: 150, description: "Promoting technological innovation and excellence in engineering", activities: ["Workshops", "Conferences", "Project Competitions"], icon: Code },
+    { name: "Cultural Committee", type: "Cultural", members: 200, description: "Celebrating the rich cultural heritage through various programs", activities: ["Classical Dance", "Music Concerts", "Drama", "Art Exhibitions"], icon: Music },
+    { name: "Sports Committee", type: "Sports", members: 180, description: "Promoting physical fitness and sportsmanship", activities: ["Cricket", "Football", "Basketball", "Athletics"], icon: Trophy },
+    { name: "Literary Society", type: "Literary", members: 120, description: "Fostering love for literature and creative writing", activities: ["Poetry", "Debates", "Story Writing", "Book Clubs"], icon: BookOpen }
   ];
 
   const events = [
-    {
-      name: "Pravega - Annual Technical Fest",
-      date: "March 15-17, 2024",
-      description: "UVCE's flagship technical festival featuring competitions, workshops, and exhibitions",
-      type: "Technical"
-    },
-    {
-      name: "Utkarshra - Cultural Fest",
-      date: "February 20-22, 2024",
-      description: "Celebrating Karnataka's rich cultural heritage through performances and competitions",
-      type: "Cultural"
-    },
-    {
-      name: "Inter-College Sports Meet",
-      date: "January 10-15, 2024",
-      description: "Annual sports championship bringing together colleges from across Karnataka",
-      type: "Sports"
-    }
+    { name: "Pravega - Annual Technical Fest", date: "March 15-17, 2024", description: "UVCE's flagship technical festival featuring competitions, workshops, and exhibitions", type: "Technical" },
+    { name: "Utkarshra - Cultural Fest", date: "February 20-22, 2024", description: "Celebrating Karnataka's rich cultural heritage through performances and competitions", type: "Cultural" },
+    { name: "Inter-College Sports Meet", date: "January 10-15, 2024", description: "Annual sports championship bringing together colleges from across Karnataka", type: "Sports" }
   ];
 
   return (
@@ -79,18 +36,17 @@ const Activities = () => {
             </p>
           </div>
 
-          {/* Student Clubs */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">Student Clubs & Societies</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               {clubs.map((club, index) => {
                 const IconComponent = club.icon;
                 return (
-                  <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-red-500">
+                  <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-uvce-primary">
                     <CardHeader>
                       <div className="flex items-center gap-4">
-                        <div className="p-3 bg-gradient-to-br from-orange-100 to-red-100 rounded-full">
-                          <IconComponent className="h-6 w-6 text-red-600" />
+                        <div className="p-3 bg-gradient-to-br from-red-100 to-red-200 rounded-full">
+                          <IconComponent className="h-6 w-6 text-uvce-primary" />
                         </div>
                         <div>
                           <CardTitle className="text-xl text-primary">{club.name}</CardTitle>
@@ -123,7 +79,6 @@ const Activities = () => {
             </div>
           </div>
 
-          {/* Major Events */}
           <div>
             <h2 className="text-3xl font-bold text-center mb-8 text-primary">Major Events</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -131,8 +86,8 @@ const Activities = () => {
                 <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
-                      <div className="p-3 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-full w-fit mx-auto mb-4">
-                        <Calendar className="h-8 w-8 text-orange-600" />
+                      <div className="p-3 bg-gradient-to-br from-red-100 to-red-200 rounded-full w-fit mx-auto mb-4">
+                        <Calendar className="h-8 w-8 text-uvce-primary" />
                       </div>
                       <h3 className="text-xl font-bold text-primary mb-2">{event.name}</h3>
                       <Badge variant="outline">{event.type}</Badge>

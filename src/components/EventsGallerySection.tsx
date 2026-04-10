@@ -24,14 +24,14 @@ const EventsGallerySection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-orange-50 to-green-50">
+    <section className="py-16 bg-gradient-to-br from-red-50 to-green-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Calendar of Events */}
           <Card className="hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <div className="flex items-center gap-2">
-                <Calendar className="h-6 w-6 text-orange-600" />
+                <Calendar className="h-6 w-6 text-uvce-primary" />
                 <CardTitle>Calendar of Events</CardTitle>
               </div>
               <CardDescription>Upcoming events and important dates</CardDescription>
@@ -40,8 +40,8 @@ const EventsGallerySection = () => {
               <ScrollArea className="h-64">
                 <div className="space-y-4 pr-4">
                   {events.map((event, index) => (
-                    <div key={index} className="border-l-4 border-orange-600 pl-4 py-2">
-                      <div className="text-sm text-orange-600 font-semibold">{event.date}</div>
+                    <div key={index} className="border-l-4 border-uvce-primary pl-4 py-2">
+                      <div className="text-sm text-uvce-primary font-semibold">{event.date}</div>
                       <div className="font-medium">{event.title}</div>
                       <div className="text-sm text-muted-foreground">{event.description}</div>
                     </div>
@@ -85,7 +85,7 @@ const EventsGallerySection = () => {
               <CardDescription>Virtual tour of UVCE campus</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-video bg-uvce-primary rounded-lg flex items-center justify-center relative overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1500673922987-e212871fec22?w=400&h=300&fit=crop"
                   alt="Campus Video Thumbnail"

@@ -36,7 +36,7 @@ const QuickAccessSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-green-50 to-orange-50">
+    <section className="py-16 bg-gradient-to-br from-green-50 to-red-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Quick Access</h2>
@@ -57,7 +57,7 @@ const QuickAccessSection = () => {
                 </div>
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-2">
-                    <Icon className="h-8 w-8 text-orange-600" />
+                    <Icon className="h-8 w-8 text-uvce-primary" />
                   </div>
                   <CardTitle className="text-lg">{item.title}</CardTitle>
                 </CardHeader>
@@ -66,7 +66,7 @@ const QuickAccessSection = () => {
                     {item.description}
                   </CardDescription>
                   <Button 
-                    className="w-full bg-orange-600 hover:bg-orange-700"
+                    className="w-full bg-uvce-primary hover:bg-uvce-primary-light"
                     onClick={() => window.location.href = item.link}
                   >
                     Explore {item.title}
