@@ -3,7 +3,7 @@ import { GraduationCap, Phone, Mail, MapPin, Globe } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
+    <footer className="bg-uvce-primary text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
