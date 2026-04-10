@@ -5,7 +5,7 @@ const OverviewSection = () => {
   return (
     <Card className="h-full">
       <CardContent className="p-6">
-        <h3 className="text-2xl font-bold mb-4 text-orange-600">Overview & History</h3>
+        <h3 className="text-2xl font-bold mb-4 text-uvce-primary">Overview & History</h3>
         <div className="space-y-4">
           <div className="aspect-video w-full mb-4 rounded-lg overflow-hidden">
             <img

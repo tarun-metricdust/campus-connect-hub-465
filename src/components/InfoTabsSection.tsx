@@ -89,7 +89,7 @@ const InfoTabsSection = () => {
                       <CardDescription className="mb-4">
                         {section.description}
                       </CardDescription>
-                      <Button variant="outline" className="w-full border-orange-600 text-orange-600 hover:bg-orange-50">
+                      <Button variant="outline" className="w-full border-uvce-primary text-uvce-primary hover:bg-uvce-primary-50">
                         Learn More
                       </Button>
                     </CardContent>

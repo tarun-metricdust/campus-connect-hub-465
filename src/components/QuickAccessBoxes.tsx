@@ -5,30 +5,10 @@ import { GraduationCap, Users, Building, TrendingUp } from "lucide-react";
 
 const QuickAccessBoxes = () => {
   const quickAccess = [
-    {
-      title: "Departments",
-      description: "Explore our 8 engineering departments",
-      icon: GraduationCap,
-      link: "/departments"
-    },
-    {
-      title: "Administration",
-      description: "Meet our leadership team",
-      icon: Users,
-      link: "/administration"
-    },
-    {
-      title: "Facilities",
-      description: "State-of-the-art infrastructure",
-      icon: Building,
-      link: "/facilities"
-    },
-    {
-      title: "Placements",
-      description: "Excellent placement records",
-      icon: TrendingUp,
-      link: "/placements"
-    }
+    { title: "Departments", description: "Explore our 8 engineering departments", icon: GraduationCap, link: "/departments" },
+    { title: "Administration", description: "Meet our leadership team", icon: Users, link: "/administration" },
+    { title: "Facilities", description: "State-of-the-art infrastructure", icon: Building, link: "/facilities" },
+    { title: "Placements", description: "Excellent placement records", icon: TrendingUp, link: "/placements" }
   ];
 
   return (

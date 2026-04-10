@@ -11,36 +11,9 @@ const Faculty = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const facultyMembers = [
-    {
-      name: "Dr. Rajesh Kumar",
-      position: "Professor & Head, CSE",
-      education: "Ph.D. from IISc Bangalore",
-      experience: "25 years",
-      specialization: "Machine Learning, Data Mining",
-      awards: ["Best Teacher Award 2023", "Research Excellence Award"],
-      email: "rajesh.kumar@uvce.ac.in",
-      phone: "+91 80 2296 1234"
-    },
-    {
-      name: "Dr. Priya Sharma",
-      position: "Professor, ECE",
-      education: "Ph.D. from IIT Delhi",
-      experience: "22 years",
-      specialization: "VLSI Design, Signal Processing",
-      awards: ["Outstanding Faculty Award", "IEEE Fellow"],
-      email: "priya.sharma@uvce.ac.in",
-      phone: "+91 80 2296 1235"
-    },
-    {
-      name: "Dr. Arjun Reddy",
-      position: "Associate Professor, Mechanical",
-      education: "Ph.D. from IIIT Hyderabad",
-      experience: "18 years",
-      specialization: "Thermal Engineering, CFD",
-      awards: ["Young Scientist Award", "Innovation Award"],
-      email: "arjun.reddy@uvce.ac.in",
-      phone: "+91 80 2296 1236"
-    }
+    { name: "Dr. Rajesh Kumar", position: "Professor & Head, CSE", education: "Ph.D. from IISc Bangalore", experience: "25 years", specialization: "Machine Learning, Data Mining", awards: ["Best Teacher Award 2023", "Research Excellence Award"], email: "rajesh.kumar@uvce.ac.in", phone: "+91 80 2296 1234" },
+    { name: "Dr. Priya Sharma", position: "Professor, ECE", education: "Ph.D. from IIT Delhi", experience: "22 years", specialization: "VLSI Design, Signal Processing", awards: ["Outstanding Faculty Award", "IEEE Fellow"], email: "priya.sharma@uvce.ac.in", phone: "+91 80 2296 1235" },
+    { name: "Dr. Arjun Reddy", position: "Associate Professor, Mechanical", education: "Ph.D. from IIIT Hyderabad", experience: "18 years", specialization: "Thermal Engineering, CFD", awards: ["Young Scientist Award", "Innovation Award"], email: "arjun.reddy@uvce.ac.in", phone: "+91 80 2296 1236" }
   ];
 
   return (
@@ -61,7 +34,7 @@ const Faculty = () => {
               <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="text-center mb-4">
-                    <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    <div className="w-24 h-24 bg-gradient-to-br from-red-400 to-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
                       {faculty.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <h3 className="text-xl font-bold text-primary">{faculty.name}</h3>
@@ -84,7 +57,7 @@ const Faculty = () => {
 
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm">
-                        <Mail className="h-4 w-4 text-orange-600" />
+                        <Mail className="h-4 w-4 text-uvce-primary" />
                         <span>{faculty.email}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm">
@@ -95,7 +68,7 @@ const Faculty = () => {
 
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <Award className="h-4 w-4 text-orange-600" />
+                        <Award className="h-4 w-4 text-uvce-primary" />
                         <span className="font-semibold">Awards:</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
