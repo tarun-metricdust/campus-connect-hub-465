@@ -11,9 +11,9 @@ const Faculty = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const facultyMembers = [
-    { name: "Dr. Rajesh Kumar", position: "Professor & Head, CSE", education: "Ph.D. from IISc Bangalore", experience: "25 years", specialization: "Machine Learning, Data Mining", awards: ["Best Teacher Award 2023", "Research Excellence Award"], email: "rajesh.kumar@uvce.ac.in", phone: "+91 80 2296 1234" },
-    { name: "Dr. Priya Sharma", position: "Professor, ECE", education: "Ph.D. from IIT Delhi", experience: "22 years", specialization: "VLSI Design, Signal Processing", awards: ["Outstanding Faculty Award", "IEEE Fellow"], email: "priya.sharma@uvce.ac.in", phone: "+91 80 2296 1235" },
-    { name: "Dr. Arjun Reddy", position: "Associate Professor, Mechanical", education: "Ph.D. from IIIT Hyderabad", experience: "18 years", specialization: "Thermal Engineering, CFD", awards: ["Young Scientist Award", "Innovation Award"], email: "arjun.reddy@uvce.ac.in", phone: "+91 80 2296 1236" }
+    { name: "Dr. Rajesh Kumar", position: "Professor & Head, CSE", education: "Ph.D. from IISc Bangalore", experience: "25 years", specialization: "Machine Learning, Data Mining", awards: ["Best Teacher Award 2023", "Research Excellence Award"], emailLocal: "rajesh.kumar", phone: "+91 80 2296 1234" },
+    { name: "Dr. Priya Sharma", position: "Professor, ECE", education: "Ph.D. from IIT Delhi", experience: "22 years", specialization: "VLSI Design, Signal Processing", awards: ["Outstanding Faculty Award", "IEEE Fellow"], emailLocal: "priya.sharma", phone: "+91 80 2296 1235" },
+    { name: "Dr. Arjun Reddy", position: "Associate Professor, Mechanical", education: "Ph.D. from IIIT Hyderabad", experience: "18 years", specialization: "Thermal Engineering, CFD", awards: ["Young Scientist Award", "Innovation Award"], emailLocal: "arjun.reddy", phone: "+91 80 2296 1236" }
   ];
 
   return (
@@ -25,7 +25,7 @@ const Faculty = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Our Faculty</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Meet our distinguished faculty members who are leaders in their respective fields
+              {siteConfig.faculty.intro}
             </p>
           </div>
 

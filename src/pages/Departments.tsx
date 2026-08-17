@@ -26,7 +26,7 @@ const Departments = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Our Departments</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              UVCE houses multiple prestigious departments, each with a rich legacy of academic excellence and innovation
+              {siteConfig.departments.intro}
             </p>
           </div>
 
