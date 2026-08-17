@@ -18,12 +18,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+				sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				surface: {
+					DEFAULT: 'hsl(var(--surface))',
+					foreground: 'hsl(var(--surface-foreground))'
+				},
+				ink: {
+					DEFAULT: 'hsl(var(--ink))',
+					foreground: 'hsl(var(--ink-foreground))'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
