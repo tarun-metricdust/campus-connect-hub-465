@@ -1,6 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Users, Book, Award } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const HeroSection = () => {
   return (
@@ -10,29 +10,27 @@ const HeroSection = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="text-uvce-primary">UVCE</span>
+                <span className="text-uvce-primary">{siteConfig.shortName}</span>
                 <span className="text-primary block text-3xl md:text-4xl mt-2">
-                  University Visvesvaraya College of Engineering
+                  {siteConfig.fullName}
                 </span>
               </h1>
               <div className="flex items-center space-x-2 text-lg text-muted-foreground">
                 <Award className="h-5 w-5 text-uvce-primary" />
-                <span>Established 1917 • Bangalore University</span>
+                <span>Established {siteConfig.establishedYear} • {siteConfig.affiliation}</span>
               </div>
             </div>
             
             <p className="text-xl text-muted-foreground max-w-lg leading-relaxed">
-              Legacy of excellence in engineering education for over a century. 
-              Nurturing innovative minds and building tomorrow's engineers with 
-              strong Indian values and global perspective.
+              {siteConfig.hero.subheadline}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-lg px-8 bg-uvce-primary hover:bg-uvce-primary-light">
-                Explore Programs
+                {siteConfig.hero.ctaPrimary}
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 border-green-600 text-green-700 hover:bg-green-50">
-                Virtual Campus Tour
+                {siteConfig.hero.ctaSecondary}
               </Button>
             </div>
             
@@ -41,22 +39,22 @@ const HeroSection = () => {
                 <div className="flex justify-center mb-2">
                   <GraduationCap className="h-8 w-8 text-uvce-primary" />
                 </div>
-                <div className="text-2xl font-bold text-primary">8</div>
-                <div className="text-sm text-muted-foreground">Departments</div>
+                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.departments.value}</div>
+                <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.departments.label}</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Users className="h-8 w-8 text-green-600" />
                 </div>
-                <div className="text-2xl font-bold text-primary">3000+</div>
-                <div className="text-sm text-muted-foreground">Students</div>
+                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.students.value}</div>
+                <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.students.label}</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Book className="h-8 w-8 text-blue-600" />
                 </div>
-                <div className="text-2xl font-bold text-primary">150+</div>
-                <div className="text-sm text-muted-foreground">Faculty</div>
+                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.faculty.value}</div>
+                <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.faculty.label}</div>
               </div>
             </div>
           </div>
