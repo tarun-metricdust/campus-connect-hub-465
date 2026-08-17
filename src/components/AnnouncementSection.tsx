@@ -91,7 +91,7 @@ const AnnouncementSection = () => {
                 className="border rounded-lg p-4 hover:shadow-md transition-shadow duration-200 bg-white"
               >
                 <div className="flex items-start justify-between mb-2">
-                  <h4 className="font-semibold text-primary text-sm">{announcement.title}</h4>
+                  <h4 className="font-semibold text-foreground text-sm">{announcement.title}</h4>
                   <Badge className={getPriorityColor(announcement.priority)}>
                     {announcement.priority}
                   </Badge>

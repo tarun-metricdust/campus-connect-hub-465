@@ -55,7 +55,7 @@ const InfrastructureSection = () => {
           {stats.map((stat, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
                 <div className="font-semibold mb-1">{stat.label}</div>
                 <div className="text-sm text-muted-foreground">{stat.description}</div>
               </CardContent>
@@ -76,7 +76,7 @@ const InfrastructureSection = () => {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-primary/10 rounded-lg">
-                    <facility.icon className="h-6 w-6 text-primary" />
+                    <facility.icon className="h-6 w-6 text-foreground" />
                   </div>
                   <CardTitle className="text-xl">{facility.name}</CardTitle>
                 </div>

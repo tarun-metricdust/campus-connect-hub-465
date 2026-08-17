@@ -39,7 +39,7 @@ const Achievements = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-green-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Achievements</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Achievements</h1>
             <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
               A century of excellence, innovation, and outstanding contributions to engineering and technology
             </p>
@@ -50,7 +50,7 @@ const Achievements = () => {
                 return (
                   <div key={index} className="text-center">
                     <Icon className="h-8 w-8 text-uvce-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
+                    <div className="text-3xl font-bold text-foreground mb-1">{stat.number}</div>
                     <div className="text-sm text-muted-foreground">{stat.label}</div>
                   </div>
                 );
@@ -62,7 +62,7 @@ const Achievements = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Recent Achievements</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Recent Achievements</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {recentAchievements.map((achievement, index) => {
               const Icon = achievement.icon;
@@ -92,7 +92,7 @@ const Achievements = () => {
 
       <section className="py-16 bg-gradient-to-br from-green-50 to-red-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Historical Legacy</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Historical Legacy</h2>
           <div className="space-y-8">
             {historicalAchievements.map((achievement, index) => (
               <div key={index} className="relative">

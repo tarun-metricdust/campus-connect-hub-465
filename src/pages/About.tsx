@@ -24,7 +24,7 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-pink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">{siteConfig.about.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">{siteConfig.about.title}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             {siteConfig.about.intro}
           </p>
@@ -63,7 +63,7 @@ const About = () => {
       {/* Key Achievements */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Key Achievements</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Key Achievements</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
@@ -71,7 +71,7 @@ const About = () => {
                 <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
                     <Icon className="h-12 w-12 text-uvce-primary mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold mb-2 text-primary">{achievement.title}</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground">{achievement.title}</h3>
                     <p className="text-sm text-muted-foreground">{achievement.description}</p>
                   </CardContent>
                 </Card>
@@ -84,7 +84,7 @@ const About = () => {
       {/* Timeline */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Our Journey Through Time</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Our Journey Through Time</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-uvce-primary"></div>
@@ -104,7 +104,7 @@ const About = () => {
                             <Badge className="bg-uvce-primary">Milestone</Badge>
                           )}
                         </div>
-                        <h3 className="text-lg font-semibold text-primary mb-2">{event.title}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-2">{event.title}</h3>
                         <p className="text-muted-foreground text-sm">{event.description}</p>
                       </CardContent>
                     </Card>
@@ -125,7 +125,7 @@ const About = () => {
       <section className="py-16 bg-gradient-to-br from-red-50 to-pink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Legacy of Excellence</h2>
+            <h2 className="text-3xl font-bold mb-6 text-foreground">Legacy of Excellence</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               {siteConfig.about.legacy}
             </p>

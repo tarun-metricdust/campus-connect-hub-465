@@ -70,7 +70,7 @@ const HistoryTestimonialsSection = () => {
           {/* History and Legacy */}
           <div className="space-y-4">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-primary">History & Legacy</h2>
+              <h2 className="text-3xl font-bold mb-4 text-foreground">History & Legacy</h2>
               <p className="text-muted-foreground mb-3">
                 Established in 1917, University Visvesvaraya College of Engineering stands as one of India's premier engineering institutions. Named after the legendary engineer Sir M. Visvesvaraya, UVCE has been at the forefront of engineering education for over a century.
               </p>
@@ -112,7 +112,7 @@ const HistoryTestimonialsSection = () => {
 
           {/* Testimonials */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-primary">What Our Alumni Say</h2>
+            <h2 className="text-3xl font-bold text-foreground">What Our Alumni Say</h2>
             <Card className="relative">
               <CardContent className="p-8">
                 <Quote className="h-8 w-8 text-uvce-primary mb-4" />
@@ -120,7 +120,7 @@ const HistoryTestimonialsSection = () => {
                   "{testimonials[currentTestimonial].text}"
                 </blockquote>
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-primary">{testimonials[currentTestimonial].author}</p>
+                  <p className="font-semibold text-foreground">{testimonials[currentTestimonial].author}</p>
                   <p className="text-sm text-muted-foreground">{testimonials[currentTestimonial].designation}</p>
                   <p className="text-xs text-muted-foreground">{testimonials[currentTestimonial].year}</p>
                 </div>

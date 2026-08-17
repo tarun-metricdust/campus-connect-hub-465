@@ -91,7 +91,7 @@ const ActivitiesSection = () => {
                 <CardContent>
                   <p className="text-muted-foreground text-sm mb-3">{club.description}</p>
                   <div className="flex items-center gap-2 mb-3">
-                    <Users className="h-4 w-4 text-primary" />
+                    <Users className="h-4 w-4 text-foreground" />
                     <span className="text-sm">{club.members} members</span>
                   </div>
                   <div className="space-y-1">
@@ -117,7 +117,7 @@ const ActivitiesSection = () => {
                     <Badge variant="outline">{event.type}</Badge>
                   </div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Calendar className="h-4 w-4 text-primary" />
+                    <Calendar className="h-4 w-4 text-foreground" />
                     <span className="text-sm text-muted-foreground">{event.date}</span>
                   </div>
                   <p className="text-muted-foreground text-sm">{event.description}</p>

@@ -39,7 +39,7 @@ const QuickAccessSection = () => {
     <section className="py-16 bg-gradient-to-br from-green-50 to-red-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Quick Access</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Quick Access</h2>
           <p className="text-xl text-muted-foreground">Explore key areas of UVCE</p>
         </div>
 

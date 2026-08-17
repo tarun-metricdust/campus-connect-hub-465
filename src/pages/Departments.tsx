@@ -24,7 +24,7 @@ const Departments = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-green-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Our Departments</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Departments</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {siteConfig.departments.intro}
             </p>
@@ -38,7 +38,7 @@ const Departments = () => {
                     <GraduationCap className="h-8 w-8 text-uvce-primary" />
                     <Badge variant="secondary">Est. {dept.established}</Badge>
                   </div>
-                  <CardTitle className="text-xl text-primary">{dept.name}</CardTitle>
+                  <CardTitle className="text-xl text-foreground">{dept.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">

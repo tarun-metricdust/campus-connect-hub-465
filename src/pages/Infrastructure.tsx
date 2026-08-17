@@ -24,7 +24,7 @@ const Infrastructure = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-green-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Infrastructure</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Infrastructure</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               World-class facilities and infrastructure supporting academic excellence and student life
             </p>
@@ -47,7 +47,7 @@ const Infrastructure = () => {
                   <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                     <div className="flex items-center gap-3 mb-4">
                       <Icon className="h-8 w-8 text-uvce-primary" />
-                      <h2 className="text-3xl font-bold text-primary">{facility.title}</h2>
+                      <h2 className="text-3xl font-bold text-foreground">{facility.title}</h2>
                     </div>
                     <p className="text-lg text-muted-foreground mb-6">{facility.description}</p>
                     <ul className="space-y-3">
@@ -77,7 +77,7 @@ const Infrastructure = () => {
 
       <section className="py-16 bg-gradient-to-br from-green-50 to-red-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">Additional Facilities</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Additional Facilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Sports Complex", description: "Basketball, volleyball, and badminton courts", icon: Users },

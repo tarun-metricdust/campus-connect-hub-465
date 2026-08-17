@@ -30,14 +30,14 @@ const Activities = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-yellow-50 to-red-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Student Activities</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Student Activities</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Explore the vibrant student life at UVCE through our diverse clubs, societies, and events
             </p>
           </div>
 
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8 text-primary">Student Clubs & Societies</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Student Clubs & Societies</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               {clubs.map((club, index) => {
                 const IconComponent = club.icon;
@@ -49,7 +49,7 @@ const Activities = () => {
                           <IconComponent className="h-6 w-6 text-uvce-primary" />
                         </div>
                         <div>
-                          <CardTitle className="text-xl text-primary">{club.name}</CardTitle>
+                          <CardTitle className="text-xl text-foreground">{club.name}</CardTitle>
                           <Badge variant="outline">{club.type}</Badge>
                         </div>
                       </div>
@@ -80,7 +80,7 @@ const Activities = () => {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-center mb-8 text-primary">Major Events</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-foreground">Major Events</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {events.map((event, index) => (
                 <Card key={index} className="hover:shadow-xl transition-shadow duration-300">
@@ -89,7 +89,7 @@ const Activities = () => {
                       <div className="p-3 bg-gradient-to-br from-red-100 to-red-200 rounded-full w-fit mx-auto mb-4">
                         <Calendar className="h-8 w-8 text-uvce-primary" />
                       </div>
-                      <h3 className="text-xl font-bold text-primary mb-2">{event.name}</h3>
+                      <h3 className="text-xl font-bold text-foreground mb-2">{event.name}</h3>
                       <Badge variant="outline">{event.type}</Badge>
                     </div>
                     <div className="space-y-3">

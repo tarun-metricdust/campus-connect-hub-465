@@ -20,7 +20,7 @@ const RecruitersSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Card>
           <CardHeader className="text-center">
-            <CardTitle className="text-3xl md:text-4xl font-bold text-primary">Our Recruiters</CardTitle>
+            <CardTitle className="text-3xl md:text-4xl font-bold text-foreground">Our Recruiters</CardTitle>
             <p className="text-xl text-muted-foreground mt-4">
               Leading companies that trust UVCE graduates
             </p>
