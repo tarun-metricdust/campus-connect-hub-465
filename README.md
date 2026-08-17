@@ -60,6 +60,20 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Customizing this template
+
+All institution-specific content is centralized in `src/config/site.ts`. Update that file to rebrand the site for your college or university:
+
+- `shortName` and `fullName` — logo and header text
+- `establishedYear`, `affiliation`, `accreditation` — institution metadata
+- `hero` — headline, subheadline, call-to-action buttons, and statistics
+- `about` — about page intro, mission, vision, timeline, achievements, and stats
+- `contact` — phone, email, website, and address
+- `footer` — footer description and copyright
+- `departments` and `faculty` — page intros and faculty email domain
+
+Images such as `/uvce-campus.jpg` can be replaced with your own campus photos in the `public/` folder.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/74bb2882-2168-4765-868d-67e3028a2bfe) and click on Share -> Publish.
