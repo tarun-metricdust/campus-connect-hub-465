@@ -24,11 +24,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-pink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">About UVCE</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">{siteConfig.about.title}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            University Visvesvaraya College of Engineering, established in 1917, stands as a beacon of engineering excellence. 
-            Named after the legendary engineer Sir M. Visvesvaraya, our institution has been shaping the future of engineering 
-            education for over a century.
+            {siteConfig.about.intro}
           </p>
         </div>
       </section>
