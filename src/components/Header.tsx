@@ -35,7 +35,7 @@ const Header = ({ onLoginClick }: HeaderProps) => {
           <Link to="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-uvce-primary" />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-primary">{siteConfig.shortName}</span>
+              <span className="text-lg font-bold text-foreground">{siteConfig.shortName}</span>
               <span className="text-xs text-muted-foreground hidden sm:block">{siteConfig.fullName}</span>
             </div>
           </Link>

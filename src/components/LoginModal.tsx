@@ -125,7 +125,7 @@ const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
         <div className="text-center text-sm text-muted-foreground">
           <p>
             Forgot your password?{" "}
-            <button className="text-primary hover:underline">Reset here</button>
+            <button className="text-foreground hover:underline">Reset here</button>
           </p>
         </div>
       </DialogContent>

@@ -65,7 +65,7 @@ const FacultySection = () => {
                   />
                 </div>
                 <h3 className="font-semibold text-lg mb-1">{faculty.name}</h3>
-                <p className="text-primary font-medium mb-2">{faculty.position}</p>
+                <p className="text-foreground font-medium mb-2">{faculty.position}</p>
                 <Badge variant="outline" className="mb-3">{faculty.department}</Badge>
                 
                 <div className="space-y-2 text-sm text-muted-foreground">

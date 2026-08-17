@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 <span className="text-uvce-primary">{siteConfig.shortName}</span>
-                <span className="text-primary block text-3xl md:text-4xl mt-2">
+                <span className="text-foreground block text-3xl md:text-4xl mt-2">
                   {siteConfig.fullName}
                 </span>
               </h1>
@@ -39,21 +39,21 @@ const HeroSection = () => {
                 <div className="flex justify-center mb-2">
                   <GraduationCap className="h-8 w-8 text-uvce-primary" />
                 </div>
-                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.departments.value}</div>
+                <div className="text-2xl font-bold text-foreground">{siteConfig.hero.stats.departments.value}</div>
                 <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.departments.label}</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Users className="h-8 w-8 text-green-600" />
                 </div>
-                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.students.value}</div>
+                <div className="text-2xl font-bold text-foreground">{siteConfig.hero.stats.students.value}</div>
                 <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.students.label}</div>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-2">
                   <Book className="h-8 w-8 text-blue-600" />
                 </div>
-                <div className="text-2xl font-bold text-primary">{siteConfig.hero.stats.faculty.value}</div>
+                <div className="text-2xl font-bold text-foreground">{siteConfig.hero.stats.faculty.value}</div>
                 <div className="text-sm text-muted-foreground">{siteConfig.hero.stats.faculty.label}</div>
               </div>
             </div>

@@ -23,7 +23,7 @@ const Faculty = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Our Faculty</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Faculty</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {siteConfig.faculty.intro}
             </p>
@@ -37,7 +37,7 @@ const Faculty = () => {
                     <div className="w-24 h-24 bg-gradient-to-br from-red-400 to-green-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
                       {faculty.name.split(' ').map(n => n[0]).join('')}
                     </div>
-                    <h3 className="text-xl font-bold text-primary">{faculty.name}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{faculty.name}</h3>
                     <p className="text-muted-foreground">{faculty.position}</p>
                   </div>
 

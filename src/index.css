@@ -117,7 +117,7 @@
 @layer components {
   /* Editorial eyebrow label used above section headings */
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.16em] text-primary;
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-foreground;
   }
 
   .section-rule {
@@ -133,7 +133,7 @@
   }
 
   .link-underline {
-    @apply relative inline-flex items-center gap-1 font-semibold text-primary underline decoration-primary/30 decoration-1 underline-offset-4 transition-colors hover:decoration-primary;
+    @apply relative inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/30 decoration-1 underline-offset-4 transition-colors hover:decoration-primary;
   }
 }
 
