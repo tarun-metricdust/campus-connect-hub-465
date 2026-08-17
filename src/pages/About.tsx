@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoginModal from "@/components/LoginModal";
@@ -6,77 +5,17 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, Award, BookOpen, Building } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const About = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
-  const timelineEvents = [
-    {
-      year: "1917",
-      title: "Foundation",
-      description: "University Visvesvaraya College of Engineering was established as part of Bangalore University.",
-      milestone: true
-    },
-    {
-      year: "1963",
-      title: "Autonomous Status",
-      description: "UVCE gained autonomous status and expanded its academic programs significantly.",
-      milestone: false
-    },
-    {
-      year: "1972",
-      title: "Research Excellence",
-      description: "Established advanced research facilities and began offering postgraduate programs.",
-      milestone: false
-    },
-    {
-      year: "1990",
-      title: "Industry Partnerships",
-      description: "Forged strong partnerships with leading industries for better placement opportunities.",
-      milestone: false
-    },
-    {
-      year: "2000",
-      title: "Digital Transformation",
-      description: "Modernized infrastructure with state-of-the-art laboratories and digital learning platforms.",
-      milestone: true
-    },
-    {
-      year: "2017",
-      title: "Centenary Celebrations",
-      description: "Celebrated 100 years of excellence in engineering education and innovation.",
-      milestone: true
-    },
-    {
-      year: "2024",
-      title: "Future Vision",
-      description: "Continuing the legacy with cutting-edge research in AI, IoT, and sustainable technologies.",
-      milestone: false
-    }
-  ];
+  const timelineEvents = siteConfig.about.timeline;
 
-  const achievements = [
-    {
-      title: "Academic Excellence",
-      description: "Consistently ranked among top engineering colleges in India",
-      icon: Award
-    },
-    {
-      title: "Research Impact",
-      description: "Over 500 research publications in international journals annually",
-      icon: BookOpen
-    },
-    {
-      title: "Alumni Network",
-      description: "50,000+ alumni across the globe in leadership positions",
-      icon: Users
-    },
-    {
-      title: "Infrastructure",
-      description: "Modern laboratories, libraries, and campus facilities",
-      icon: Building
-    }
-  ];
+  const achievements = siteConfig.about.achievements.map((achievement, index) => {
+    const icons = [Award, BookOpen, Users, Building];
+    return { ...achievement, icon: icons[index] };
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -85,11 +24,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-pink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">About UVCE</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">{siteConfig.about.title}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            University Visvesvaraya College of Engineering, established in 1917, stands as a beacon of engineering excellence. 
-            Named after the legendary engineer Sir M. Visvesvaraya, our institution has been shaping the future of engineering 
-            education for over a century.
+            {siteConfig.about.intro}
           </p>
         </div>
       </section>
@@ -104,9 +41,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To provide world-class engineering education that combines theoretical knowledge with practical 
-                  application, fostering innovation, critical thinking, and ethical responsibility among our students 
-                  to meet the evolving needs of society and industry.
+                  {siteConfig.about.mission}
                 </p>
               </CardContent>
             </Card>
@@ -117,9 +52,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be a globally recognized center of excellence in engineering education and research, 
-                  producing competent engineers and leaders who contribute to technological advancement 
-                  and sustainable development of society.
+                  {siteConfig.about.vision}
                 </p>
               </CardContent>
             </Card>
@@ -194,24 +127,22 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-primary">Legacy of Excellence</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              For over a century, UVCE has been nurturing engineering talent and contributing to India's technological 
-              advancement. Our alumni have made significant contributions in various fields including space research, 
-              information technology, infrastructure development, and entrepreneurship.
+              {siteConfig.about.legacy}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">100+</h3>
-              <p className="text-muted-foreground">Years of Excellence</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.years.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.years.label}</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">50,000+</h3>
-              <p className="text-muted-foreground">Alumni Worldwide</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.alumni.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.alumni.label}</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">8</h3>
-              <p className="text-muted-foreground">Engineering Departments</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.departments.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.departments.label}</p>
             </div>
           </div>
         </div>

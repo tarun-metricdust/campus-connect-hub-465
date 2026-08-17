@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, GraduationCap } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { siteConfig } from "@/config/site";
 
 interface HeaderProps {
   onLoginClick: () => void;
@@ -35,8 +35,8 @@ const Header = ({ onLoginClick }: HeaderProps) => {
           <Link to="/" className="flex items-center space-x-2">
             <GraduationCap className="h-8 w-8 text-uvce-primary" />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-primary">UVCE</span>
-              <span className="text-xs text-muted-foreground hidden sm:block">University Visvesvaraya College of Engineering</span>
+              <span className="text-lg font-bold text-primary">{siteConfig.shortName}</span>
+              <span className="text-xs text-muted-foreground hidden sm:block">{siteConfig.fullName}</span>
             </div>
           </Link>
 
