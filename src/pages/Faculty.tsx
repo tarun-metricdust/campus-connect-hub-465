@@ -58,7 +58,7 @@ const Faculty = () => {
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm">
                         <Mail className="h-4 w-4 text-uvce-primary" />
-                        <span>{faculty.email}</span>
+                        <span>{`${faculty.emailLocal}@${siteConfig.faculty.emailDomain}`}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm">
                         <Phone className="h-4 w-4 text-green-600" />
