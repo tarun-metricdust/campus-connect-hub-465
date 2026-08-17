@@ -1,5 +1,5 @@
-
 import { GraduationCap, Phone, Mail, MapPin, Globe } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const Footer = () => {
   return (
