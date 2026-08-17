@@ -10,73 +10,12 @@ import { siteConfig } from "@/config/site";
 const About = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
-  const timelineEvents = [
-    {
-      year: "1917",
-      title: "Foundation",
-      description: "University Visvesvaraya College of Engineering was established as part of Bangalore University.",
-      milestone: true
-    },
-    {
-      year: "1963",
-      title: "Autonomous Status",
-      description: "UVCE gained autonomous status and expanded its academic programs significantly.",
-      milestone: false
-    },
-    {
-      year: "1972",
-      title: "Research Excellence",
-      description: "Established advanced research facilities and began offering postgraduate programs.",
-      milestone: false
-    },
-    {
-      year: "1990",
-      title: "Industry Partnerships",
-      description: "Forged strong partnerships with leading industries for better placement opportunities.",
-      milestone: false
-    },
-    {
-      year: "2000",
-      title: "Digital Transformation",
-      description: "Modernized infrastructure with state-of-the-art laboratories and digital learning platforms.",
-      milestone: true
-    },
-    {
-      year: "2017",
-      title: "Centenary Celebrations",
-      description: "Celebrated 100 years of excellence in engineering education and innovation.",
-      milestone: true
-    },
-    {
-      year: "2024",
-      title: "Future Vision",
-      description: "Continuing the legacy with cutting-edge research in AI, IoT, and sustainable technologies.",
-      milestone: false
-    }
-  ];
+  const timelineEvents = siteConfig.about.timeline;
 
-  const achievements = [
-    {
-      title: "Academic Excellence",
-      description: "Consistently ranked among top engineering colleges in India",
-      icon: Award
-    },
-    {
-      title: "Research Impact",
-      description: "Over 500 research publications in international journals annually",
-      icon: BookOpen
-    },
-    {
-      title: "Alumni Network",
-      description: "50,000+ alumni across the globe in leadership positions",
-      icon: Users
-    },
-    {
-      title: "Infrastructure",
-      description: "Modern laboratories, libraries, and campus facilities",
-      icon: Building
-    }
-  ];
+  const achievements = siteConfig.about.achievements.map((achievement, index) => {
+    const icons = [Award, BookOpen, Users, Building];
+    return { ...achievement, icon: icons[index] };
+  });
 
   return (
     <div className="min-h-screen bg-background">
