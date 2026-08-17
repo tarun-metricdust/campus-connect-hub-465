@@ -63,7 +63,7 @@ const HeroSection = () => {
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-red-200">
               <img
                 src="/uvce-campus.jpg"
-                alt="UVCE Campus - Historic Engineering College"
+                alt="Campus building - Modern University Campus"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent"></div>

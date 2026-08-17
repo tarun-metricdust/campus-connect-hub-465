@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoginModal from "@/components/LoginModal";
@@ -6,6 +5,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, Award, BookOpen, Building } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 const About = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
