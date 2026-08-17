@@ -41,9 +41,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To provide world-class engineering education that combines theoretical knowledge with practical 
-                  application, fostering innovation, critical thinking, and ethical responsibility among our students 
-                  to meet the evolving needs of society and industry.
+                  {siteConfig.about.mission}
                 </p>
               </CardContent>
             </Card>
@@ -54,9 +52,7 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
-                  To be a globally recognized center of excellence in engineering education and research, 
-                  producing competent engineers and leaders who contribute to technological advancement 
-                  and sustainable development of society.
+                  {siteConfig.about.vision}
                 </p>
               </CardContent>
             </Card>
@@ -131,24 +127,22 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-primary">Legacy of Excellence</h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              For over a century, UVCE has been nurturing engineering talent and contributing to India's technological 
-              advancement. Our alumni have made significant contributions in various fields including space research, 
-              information technology, infrastructure development, and entrepreneurship.
+              {siteConfig.about.legacy}
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">100+</h3>
-              <p className="text-muted-foreground">Years of Excellence</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.years.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.years.label}</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">50,000+</h3>
-              <p className="text-muted-foreground">Alumni Worldwide</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.alumni.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.alumni.label}</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-uvce-primary">8</h3>
-              <p className="text-muted-foreground">Engineering Departments</p>
+              <h3 className="text-4xl font-bold text-uvce-primary">{siteConfig.about.stats.departments.value}</h3>
+              <p className="text-muted-foreground">{siteConfig.about.stats.departments.label}</p>
             </div>
           </div>
         </div>
