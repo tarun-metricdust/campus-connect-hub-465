@@ -142,7 +142,7 @@ const HistoryTestimonialsSection = () => {
                       <div
                         key={index}
                         className={`w-2 h-2 rounded-full ${
-                          index === currentTestimonial ? 'bg-uvce-primary' : 'bg-gray-300'
+                          index === currentTestimonial ? 'bg-primary' : 'bg-border'
                         }`}
                       />
                     ))}
