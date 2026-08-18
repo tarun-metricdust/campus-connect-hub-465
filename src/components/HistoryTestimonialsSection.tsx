@@ -116,13 +116,16 @@ const HistoryTestimonialsSection = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">What Our Alumni Say</h2>
-            <Card className="relative">
-              <CardContent className="p-8">
-                <Quote className="h-8 w-8 text-uvce-primary mb-4" />
-                <blockquote className="text-lg italic mb-6">
-                  "{testimonials[currentTestimonial].text}"
+          <div>
+            <p className="eyebrow mb-2">Voices</p>
+            <h2 className="section-rule font-serif text-2xl font-bold text-foreground md:text-3xl">
+              What our alumni say
+            </h2>
+            <Card className="relative rounded-none border-l-4 border-l-primary bg-surface shadow-none">
+              <CardContent className="p-6 sm:p-8">
+                <Quote className="mb-4 h-8 w-8 text-primary" />
+                <blockquote className="mb-6 font-serif text-lg leading-relaxed text-foreground sm:text-xl">
+                  &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                 </blockquote>
                 <div className="border-t pt-4">
                   <p className="font-semibold text-foreground">{testimonials[currentTestimonial].author}</p>
