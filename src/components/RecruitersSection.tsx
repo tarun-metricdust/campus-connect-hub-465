@@ -1,6 +1,3 @@
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const RecruitersSection = () => {
   const recruiters = [
     { name: "Infosys", logo: "https://logo.clearbit.com/infosys.com" },
@@ -12,39 +9,43 @@ const RecruitersSection = () => {
     { name: "IBM", logo: "https://logo.clearbit.com/ibm.com" },
     { name: "Oracle", logo: "https://logo.clearbit.com/oracle.com" },
     { name: "Accenture", logo: "https://logo.clearbit.com/accenture.com" },
-    { name: "Cognizant", logo: "https://logo.clearbit.com/cognizant.com" }
+    { name: "Cognizant", logo: "https://logo.clearbit.com/cognizant.com" },
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl md:text-4xl font-bold text-foreground">Our Recruiters</CardTitle>
-            <p className="text-xl text-muted-foreground mt-4">
-              Leading companies that trust UVCE graduates
-            </p>
-          </CardHeader>
-          <CardContent>
-            <div className="relative overflow-hidden">
-              <div className="flex animate-scroll items-center" style={{ width: 'max-content' }}>
-                {[...recruiters, ...recruiters].map((company, index) => (
-                  <div key={index} className="flex-shrink-0 w-32 h-16 mx-6 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <img
-                      src={company.logo}
-                      alt={company.name}
-                      className="max-w-24 max-h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/120x60/f3f4f6/6b7280?text=${company.name}`;
-                      }}
-                    />
-                  </div>
-                ))}
-              </div>
+    <section className="bg-surface py-12 md:py-16">
+      <div className="container-editorial">
+        <div className="mb-8 text-center">
+          <p className="eyebrow mb-2">Careers</p>
+          <h2 className="font-serif text-2xl font-bold text-foreground md:text-3xl">
+            Where our graduates go
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground sm:text-base">
+            Leading organisations that recruit from our campus each year.
+          </p>
+        </div>
+      </div>
+
+      <div className="relative overflow-hidden border-y border-border bg-background py-6">
+        <div className="flex animate-scroll items-center" style={{ width: "max-content" }}>
+          {[...recruiters, ...recruiters].map((company, index) => (
+            <div
+              key={index}
+              className="mx-5 flex h-14 w-28 shrink-0 items-center justify-center sm:mx-8 sm:w-32"
+            >
+              <img
+                src={company.logo}
+                alt={company.name}
+                loading="lazy"
+                className="max-h-10 max-w-24 object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                }}
+              />
             </div>
-          </CardContent>
-        </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
