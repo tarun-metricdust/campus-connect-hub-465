@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -17,26 +16,31 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header onLoginClick={() => setIsLoginOpen(true)} />
-      <HeroSection />
-      
-      {/* Announcements and Quick Access Section */}
-      <section className="py-12 bg-surface">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-            <div className="h-full">
-              <AnnouncementSection />
-            </div>
-            <div className="h-full">
-              <QuickAccessBoxes />
+      <main>
+        <HeroSection />
+
+        {/* Notices and quick access */}
+        <section className="border-b border-border bg-background py-12 md:py-16">
+          <div className="container-editorial">
+            <div className="grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-12">
+              <div>
+                <AnnouncementSection />
+              </div>
+              <div>
+                <h2 className="section-rule font-serif text-2xl font-bold text-foreground md:text-3xl">
+                  Explore the College
+                </h2>
+                <QuickAccessBoxes />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <InfoTabsSection />
-      <HistoryTestimonialsSection />
-      <EventsGallerySection />
-      <RecruitersSection />
+        <InfoTabsSection />
+        <HistoryTestimonialsSection />
+        <EventsGallerySection />
+        <RecruitersSection />
+      </main>
       <Footer />
       <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </div>
