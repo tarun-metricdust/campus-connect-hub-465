@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-red-50 via-background to-green-50">
+    <section id="home" className="pt-16 min-h-screen flex items-center bg-surface">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">

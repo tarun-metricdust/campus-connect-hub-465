@@ -20,7 +20,7 @@ const Index = () => {
       <HeroSection />
       
       {/* Announcements and Quick Access Section */}
-      <section className="py-12 bg-gradient-to-br from-red-50 to-pink-50">
+      <section className="py-12 bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             <div className="h-full">

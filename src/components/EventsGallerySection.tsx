@@ -24,7 +24,7 @@ const EventsGallerySection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-red-50 to-green-50">
+    <section className="py-16 bg-surface">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Calendar of Events */}
