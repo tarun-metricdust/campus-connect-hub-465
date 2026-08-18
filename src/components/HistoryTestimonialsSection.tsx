@@ -64,29 +64,34 @@ const HistoryTestimonialsSection = () => {
   };
 
   return (
-    <section className="py-8 bg-surface">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+    <section className="border-b border-border bg-background py-12 md:py-16">
+      <div className="container-editorial">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           {/* History and Legacy */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-foreground">History & Legacy</h2>
-              <p className="text-muted-foreground mb-3">
-                Established in 1917, University Visvesvaraya College of Engineering stands as one of India's premier engineering institutions. Named after the legendary engineer Sir M. Visvesvaraya, UVCE has been at the forefront of engineering education for over a century.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                With a rich heritage of producing distinguished engineers, researchers, and leaders, UVCE continues to uphold its tradition of excellence in education and innovation.
-              </p>
-              <Link to="/about">
-                <Button className="bg-uvce-primary hover:bg-uvce-primary-light">
-                  Know More
+              <p className="eyebrow mb-2">Our Heritage</p>
+              <h2 className="section-rule font-serif text-2xl font-bold text-foreground md:text-3xl">
+                History &amp; Legacy
+              </h2>
+              <div className="prose-editorial space-y-4">
+                <p>
+                  Established in 1917, University Visvesvaraya College of Engineering stands as one of India's premier engineering institutions. Named after the legendary engineer Sir M. Visvesvaraya, UVCE has been at the forefront of engineering education for over a century.
+                </p>
+                <p>
+                  With a rich heritage of producing distinguished engineers, researchers, and leaders, UVCE continues to uphold its tradition of excellence in education and innovation.
+                </p>
+              </div>
+              <Link to="/about" className="mt-6 inline-block">
+                <Button className="rounded-none bg-primary px-6 hover:bg-primary-dark">
+                  Read our story
                 </Button>
               </Link>
             </div>
-            
+
             {/* Image Carousel */}
             <div className="relative">
-              <Carousel className="w-full max-w-md mx-auto">
+              <Carousel className="mx-auto w-full">
                 <CarouselContent>
                   {historyImages.map((image, index) => (
                     <CarouselItem key={index}>
