@@ -61,12 +61,12 @@ const HeroSection = () => {
             <dl className="grid grid-cols-3 divide-x divide-border">
               {stats.map((stat) => (
                 <div key={stat.label} className="px-2 py-6 text-center sm:py-8">
-                  <dt className="order-2 text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-normal">
-                    {stat.label}
-                  </dt>
                   <dd className="font-serif text-2xl font-bold text-primary sm:text-4xl">
                     {stat.value}
                   </dd>
+                  <dt className="mt-1 text-[11px] uppercase tracking-[0.12em] text-muted-foreground sm:text-sm">
+                    {stat.label}
+                  </dt>
                 </div>
               ))}
             </dl>
