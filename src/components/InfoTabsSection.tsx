@@ -57,43 +57,50 @@ const InfoTabsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Information Hub</h2>
-          <p className="text-xl text-muted-foreground">Comprehensive information at your fingertips</p>
+    <section className="border-b border-border bg-surface py-12 md:py-16">
+      <div className="container-editorial">
+        <div className="section-rule">
+          <p className="eyebrow mb-2">Information Hub</p>
+          <h2 className="font-serif text-2xl font-bold text-foreground md:text-4xl">
+            Everything you need, in one place
+          </h2>
         </div>
 
         <Tabs defaultValue="faculty" className="w-full">
-          <TabsList className="grid w-full grid-cols-6 mb-8">
+          <TabsList className="mb-8 flex h-auto w-full justify-start gap-1 overflow-x-auto rounded-none border-b border-border bg-transparent p-0 no-scrollbar">
             {Object.entries(tabsData).map(([key, data]) => {
               const Icon = data.icon;
               return (
-                <TabsTrigger key={key} value={key} className="flex items-center gap-2">
+                <TabsTrigger
+                  key={key}
+                  value={key}
+                  className="flex shrink-0 items-center gap-2 rounded-none border-b-[3px] border-transparent bg-transparent px-3 py-3 text-sm font-semibold capitalize text-muted-foreground data-[state=active]:border-primary data-[state=active]:bg-transparent data-[state=active]:text-primary data-[state=active]:shadow-none sm:px-4"
+                >
                   <Icon className="h-4 w-4" />
-                  <span className="capitalize hidden sm:inline">{key}</span>
+                  <span>{key}</span>
                 </TabsTrigger>
               );
             })}
           </TabsList>
 
           {Object.entries(tabsData).map(([key, data]) => (
-            <TabsContent key={key} value={key}>
-              <div className="grid md:grid-cols-3 gap-6">
+            <TabsContent key={key} value={key} className="mt-0">
+              <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
                 {data.sections.map((section, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                    <CardHeader>
-                      <CardTitle className="text-lg">{section.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="mb-4">
-                        {section.description}
-                      </CardDescription>
-                      <Button variant="outline" className="w-full border-uvce-primary text-uvce-primary hover:bg-uvce-primary-50">
-                        Learn More
-                      </Button>
-                    </CardContent>
-                  </Card>
+                  <article
+                    key={index}
+                    className="flex flex-col bg-background p-6 transition-colors hover:bg-surface"
+                  >
+                    <h3 className="font-serif text-lg font-semibold text-foreground">
+                      {section.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                      {section.description}
+                    </p>
+                    <a href={section.link} className="link-underline mt-5 text-sm">
+                      Learn more
+                    </a>
+                  </article>
                 ))}
               </div>
             </TabsContent>

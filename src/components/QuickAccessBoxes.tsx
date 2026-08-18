@@ -1,41 +1,33 @@
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Users, Building, TrendingUp } from "lucide-react";
+import { GraduationCap, Users, Building, TrendingUp, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const QuickAccessBoxes = () => {
   const quickAccess = [
-    { title: "Departments", description: "Explore our 8 engineering departments", icon: GraduationCap, link: "/departments" },
-    { title: "Administration", description: "Meet our leadership team", icon: Users, link: "/administration" },
-    { title: "Facilities", description: "State-of-the-art infrastructure", icon: Building, link: "/facilities" },
-    { title: "Placements", description: "Excellent placement records", icon: TrendingUp, link: "/placements" }
+    { title: "Departments", description: "Explore our engineering departments", icon: GraduationCap, link: "/departments" },
+    { title: "Faculty", description: "Meet our academic community", icon: Users, link: "/faculty" },
+    { title: "Facilities", description: "Laboratories, library and campus", icon: Building, link: "/infrastructure" },
+    { title: "Placements", description: "Recruiters and outcomes", icon: TrendingUp, link: "/achievements" },
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-4 h-full">
-      {quickAccess.map((item, index) => {
+    <div className="grid grid-cols-1 gap-px bg-border sm:grid-cols-2">
+      {quickAccess.map((item) => {
         const Icon = item.icon;
         return (
-          <Card key={index} className="hover:shadow-lg transition-shadow duration-300 flex flex-col">
-            <CardHeader className="pb-2 flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <Icon className="h-5 w-5 text-uvce-primary" />
-                <CardTitle className="text-base">{item.title}</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="flex-1 flex flex-col">
-              <CardDescription className="mb-3 text-xs flex-1">
-                {item.description}
-              </CardDescription>
-              <Button 
-                size="sm"
-                className="w-full bg-uvce-primary hover:bg-uvce-primary-light text-xs"
-                onClick={() => window.location.href = item.link}
-              >
-                Explore
-              </Button>
-            </CardContent>
-          </Card>
+          <Link
+            key={item.title}
+            to={item.link}
+            className="group flex min-h-[128px] flex-col justify-between bg-background p-5 transition-colors hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            <Icon className="h-6 w-6 text-primary" strokeWidth={1.6} />
+            <div className="mt-4">
+              <h3 className="flex items-center gap-1.5 font-serif text-lg font-semibold text-foreground">
+                {item.title}
+                <ArrowUpRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">{item.description}</p>
+            </div>
+          </Link>
         );
       })}
     </div>

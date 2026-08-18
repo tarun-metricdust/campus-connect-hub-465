@@ -21,7 +21,7 @@ const Departments = () => {
     <div className="min-h-screen bg-background">
       <Header onLoginClick={() => setIsLoginOpen(true)} />
       
-      <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-green-50">
+      <section className="pt-28 pb-12 md:pt-44 md:pb-16 border-b border-border bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Our Departments</h1>

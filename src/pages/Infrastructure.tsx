@@ -21,7 +21,7 @@ const Infrastructure = () => {
     <div className="min-h-screen bg-background">
       <Header onLoginClick={() => setIsLoginOpen(true)} />
       
-      <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-green-50">
+      <section className="pt-28 pb-12 md:pt-44 md:pb-16 border-b border-border bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Infrastructure</h1>
@@ -75,7 +75,7 @@ const Infrastructure = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-green-50 to-red-50">
+      <section className="py-16 bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Additional Facilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

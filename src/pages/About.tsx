@@ -22,7 +22,7 @@ const About = () => {
       <Header onLoginClick={() => setIsLoginOpen(true)} />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-red-50 to-pink-50">
+      <section className="pt-28 pb-12 md:pt-44 md:pb-16 border-b border-border bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">{siteConfig.about.title}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -61,7 +61,7 @@ const About = () => {
       </section>
 
       {/* Key Achievements */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
+      <section className="py-16 bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">Key Achievements</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -122,7 +122,7 @@ const About = () => {
       </section>
 
       {/* Legacy Section */}
-      <section className="py-16 bg-gradient-to-br from-red-50 to-pink-50">
+      <section className="py-16 bg-surface">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-6 text-foreground">Legacy of Excellence</h2>
